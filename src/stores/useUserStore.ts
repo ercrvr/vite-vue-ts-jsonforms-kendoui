@@ -119,6 +119,7 @@ export const useUserStore = defineStore('user', {
     },
     resetForm() {
       this.user = new UserEntity()
+      this.user.email = ''
     },
     setHasInfo(val: boolean) {
       this.hasInfo = val

@@ -13,7 +13,7 @@ describe('UserEntity', () => {
     expect(user.surname).toBe('') // Default value for surname
     expect(user.dateOfBirth).toBe(null) // Default value for dateOfBirth
     expect(user.age).toBeUndefined() // Age is not set, should be undefined
-    expect(user.email).toBe('') // Default value for email
+    expect(user.email).toBeUndefined() // Email should be undefined initially
   })
 
   it('should allow setting properties', () => {
