@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "foreName": {
+      "type": "string",
+      "description": "Please enter your first name",
+      "minLength": 3,
+      "pattern": "^[a-zA-Z]+$"
+    },
+    "surname": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Please enter your Surname",
+      "pattern": "^[a-zA-Z]+$"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "description": "Please enter your birth date."
+    },
+    "age": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string",
+      "description": "Please enter your email.",
+      "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    }
+  },
+  "if": {
+    "not": {
+      "properties": {
+        "age": {
+          "allOf": [
+            {
+              "type": "integer",
+              "maximum": 18
+            }
+          ]
+        }
+      }
+    }
+  },
+  "then": {
+    "required": ["email"]
+  }
+}

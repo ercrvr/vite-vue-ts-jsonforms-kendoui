@@ -1,0 +1,113 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "HorizontalLayout",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/foreName",
+          "label": "Forename(s)",
+          "description": "Forename is required",
+          "options": {
+            "styles": {
+              "control": {
+                "error": "control-error font-figtree",
+                "label": "control-label h-[18px] text-sm font-figtree leading-[17.5px] font-medium",
+                "input": "k-input k-input-md k-input-solid k-rounded-md input kcontrol"
+              }
+            },
+            "placeholder": "Type",
+            "hideRequiredAsterisk": true
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/surname",
+          "description": "Surname is required",
+          "options": {
+            "styles": {
+              "control": {
+                "error": "control-error font-figtree",
+                "label": "control-label h-[18px] text-sm font-figtree leading-[17.5px] font-medium",
+                "input": "k-input k-input-md k-input-solid k-rounded-md input kcontrol"
+              }
+            },
+            "placeholder": "Type",
+            "hideRequiredAsterisk": true
+          }
+        }
+      ],
+      "options": {
+        "styles": {
+          "horizontalLayout": {
+            "root": "horizontal-layout flex",
+            "item": "horizontal-layout-item flex-1 flex flex-col"
+          }
+        }
+      }
+    },
+    {
+      "type": "HorizontalLayout",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/dateOfBirth",
+          "label": "Date of Birth",
+          "description": "Date of Birth is required",
+          "options": {
+            "format": "date",
+            "styles": {
+              "control": {
+                "error": "control-error font-figtree",
+                "label": "control-label h-[18px] text-sm font-figtree leading-[17.5px] font-medium",
+                "input": "k-input k-datepicker k-input-md k-input-solid k-rounded-md input kdcontrol"
+              }
+            },
+            "hideRequiredAsterisk": true
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/email",
+          "description": "Please enter a valid EMail Address",
+          "options": {
+            "styles": {
+              "control": {
+                "error": "control-error font-figtree",
+                "label": "control-label h-[18px] text-sm font-figtree leading-[17.5px] font-medium",
+                "input": "k-input k-input-md k-input-solid k-rounded-md input kcontrol"
+              }
+            },
+            "placeholder": "Type",
+            "hideRequiredAsterisk": true
+          },
+          "rule": {
+            "effect": "DISABLE",
+            "condition": {
+              "scope": "#/properties/age",
+              "schema": {
+                "maximum": 17
+              }
+            }
+          }
+        }
+      ],
+      "options": {
+        "styles": {
+          "horizontalLayout": {
+            "root": "horizontal-layout flex",
+            "item": "horizontal-layout-item flex-1 flex flex-col"
+          }
+        }
+      }
+    }
+  ],
+  "options": {
+    "styles": {
+      "verticalLayout": {
+        "root": "vertical-layout flex flex-col "
+      }
+    }
+  }
+}

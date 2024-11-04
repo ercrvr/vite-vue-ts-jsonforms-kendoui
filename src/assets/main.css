@@ -1,0 +1,89 @@
+@import './base.css';
+
+@font-face {
+  font-family: 'Figtree-Regular';
+  src: url('../assets/fonts/Figtree-Regular.ttf') format('truetype');
+}
+
+.jsonforms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 0.3px solid #97a1af;
+  background-color: white;
+}
+
+.vertical-layout {
+  gap: 20px;
+}
+
+.horizontal-layout {
+  gap: 15px;
+}
+
+.horizontal-layout .horizontal-layout-item .control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-error {
+  color: red;
+}
+
+.control-label {
+  color: #202b37;
+}
+
+.control .kdcontrol {
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ced2da;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.control .k-datepicker .k-button {
+  background-color: white;
+  border-width: 0;
+}
+
+.control .k-datepicker .k-button .k-icon {
+  color: #003366;
+}
+
+.control .kcontrol {
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ced2da;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.label-disabled {
+  color: #97a1af !important;
+}
+
+footer {
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.12);
+  background-color: rgba(255, 255, 255, 1);
+  height: 68px;
+  position: sticky;
+  bottom: 0;
+}
+
+.submit-disabled {
+  background-color: #ced2da !important;
+  color: #97a1af;
+  cursor: auto;
+}
