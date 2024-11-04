@@ -29,7 +29,7 @@ git clone https://github.com/ercrvr/vite-vue-ts-jsonforms-kendoui
 Go to the project's root
 
 ```sh
-cd typescript-supabase
+cd vite-vue-ts-jsonforms-kendoui
 ```
 
 Open the project with your code editor:
